@@ -33,4 +33,4 @@ def draw_brick():
                 point2 = sd.get_point(x2, y2)
                 sd.rectangle(point1, point2, width=3)
 
-    sd.pause()
+

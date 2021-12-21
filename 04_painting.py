@@ -18,8 +18,24 @@
 # пример см. lesson_005/results/04_painting.jpg
 # Приправить своей фантазией по вкусу (коты? коровы? люди? трактор? что придумается)
 
-# TODO здесь ваш код
 
+import simple_draw as sd
+from picture import wall, roof, tree, rainbow
+
+sd.set_screen_size(1900, 900)
+
+wall.draw_brick()
+
+roof.draw_roof()
+
+point_tree = sd.get_point(1400, 50)
+tree_trunk = sd.get_vector(start_point=point_tree, angle=90, length=100)
+tree_trunk.draw(width=5)
+tree.draw_tree(start_point=tree_trunk.end_point, angle=0, length=100)
+
+rainbow.draw_rainbow()
+
+sd.pause()
 # Усложненное задание (делать по желанию)
 # Анимировать картину.
 # Пусть слева идет снегопад, радуга переливается цветами, смайлик моргает, солнце крутит лучами, етс.
